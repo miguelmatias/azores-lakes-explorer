@@ -2,7 +2,7 @@
 
 Shiny app over the processed Azores lake monitoring tables (coverage, taxon richness, searchable samples). Empty coverage tiles mean that season is **not in this project**, not that a campaign did not happen. 2018 SPR18 macros and chemistry are coded as **Spring** (Mar–Apr).
 
-Live app: *(shinyapps.io URL added after deploy)*
+Live app: *(add the shinyapps.io URL after `Rscript deploy.R`)*
 
 ## Run locally
 
@@ -12,6 +12,21 @@ shiny::runApp()
 ```
 
 Packages: `shiny`, `bslib`, `dplyr`, `ggplot2`, `plotly`, `DT`, `readr`.
+
+## Publish
+
+GitHub (code) plus shinyapps.io (the shareable link):
+
+```sh
+# 1. GitHub CLI (once)
+gh auth login --hostname github.com --git-protocol ssh --web
+
+# 2. shinyapps.io token from https://www.shinyapps.io/admin/#/tokens (once, in R)
+#    rsconnect::setAccountInfo(name = "...", token = "...", secret = "...")
+
+# 3. Create the public repo, push, and deploy
+sh publish.sh
+```
 
 ## Data
 
