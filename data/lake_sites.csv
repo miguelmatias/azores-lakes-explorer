@@ -1,0 +1,28 @@
+lake_id,name_display,island_oikos,typology_oikos,lat_wgs84,lon_wgs84,alt_m,area_km2,match_status,coord_source,coord_note
+caldeirao,Caldeirão,Corvo,Shallow,39.712981,-31.107635,410.0,0.32,matched,lake_lookup (Oikos environment),
+branca,Branca,Flores,Shallow,39.448863,-31.225666,,,historical_only,OpenStreetMap,"Lagoa Branca, Flores (OSM way 275608406)"
+comprida,Comprida,Flores,Deep,39.441394,-31.221389,650.0,0.05,matched,lake_lookup (Oikos environment),
+funda,Funda,Flores,Deep,39.405917,-31.217624,360.0,0.35,matched,lake_lookup (Oikos environment),
+lomba,Lomba,Flores,Deep,39.425381,-31.188914,650.0,0.02,matched,lake_lookup (Oikos environment),
+negra,Negra,Flores,Deep,39.442399,-31.225773,530.0,0.11,matched,lake_lookup (Oikos environment),
+rasa,Rasa,Flores,Deep,39.409599,-31.224637,530.0,0.1,matched,lake_lookup (Oikos environment),
+caiado,Caiado,Pico,Shallow,38.456646,-28.250922,810.0,0.05,matched,lake_lookup (Oikos environment),
+capitao,Capitão,Pico,Shallow,38.487568,-28.318806,790.0,0.03,matched,lake_lookup (Oikos environment),
+paul,Paúl,Pico,Shallow,38.427785,-28.232214,790.0,0.02,matched,lake_lookup (Oikos environment),
+peixinho,Peixinho,Pico,Shallow,38.434546,-28.173955,870.0,0.01,matched,lake_lookup (Oikos environment),
+rosada,Rosada,Pico,Shallow,38.432672,-28.185889,900.0,0.01,matched,lake_lookup (Oikos environment),
+azul,Azul,Sao Miguel,Deep,37.868434,-25.781534,260.0,3.59,matched,lake_lookup (Oikos environment),
+canario,Canário,Sao Miguel,Shallow,37.836032,-25.759657,750.0,0.02,matched,lake_lookup (Oikos environment),
+congro,Congro,Sao Miguel,Deep,37.75653,-25.407737,420.0,0.04,matched,lake_lookup (Oikos environment),
+empadadas_norte,Empadadas Norte,Sao Miguel,Shallow,37.826339,-25.748484,740.0,0.02,matched,lake_lookup (Oikos environment),
+empadadas_sul,Empadadas Sul,Sao Miguel,Shallow,37.824456,-25.746934,750.0,0.0,matched,lake_lookup (Oikos environment),
+fogo,Fogo,Sao Miguel,Deep,37.762703,-25.47457,574.0,1.44,matched,lake_lookup (Oikos environment),
+furnas,Furnas,Sao Miguel,Deep,37.758229,-25.332756,280.0,1.93,matched,lake_lookup (Oikos environment),
+rasa_serra_devassa,Rasa Serra Devassa,Sao Miguel,Shallow,37.824983,-25.751513,765.0,0.03,matched,rivelake GPS,São Miguel Serra Devassa; replaces Flores Rasa coordinates copied into Environment_20112012
+rasa_sete_cidades,Rasa Sete Cidades,Sao Miguel,Shallow,37.843063,-25.779549,545.0,0.04,matched,lake_lookup (Oikos environment),
+santiago,Santiago,Sao Miguel,Deep,37.848673,-25.773906,360.0,0.25,matched,lake_lookup (Oikos environment),
+sao_bras,São Brás,Sao Miguel,Shallow,37.793287,-25.409823,610.0,0.06,matched,lake_lookup (Oikos environment),
+verde,Verde,Sao Miguel,Deep,37.847537,-25.788922,260.0,0.86,matched,lake_lookup (Oikos environment),
+cubres_este,Cubres Este,Sao Jorge,,38.6408,-27.9615,,,recent_only,approximate,"East lagoon at Fajã dos Cubres; offset from OSM hamlet 38.641, -27.967"
+cubres_oeste,Cubres Oeste,Sao Jorge,,38.6405,-27.972,,,recent_only,approximate,"West lagoon at Fajã dos Cubres; offset from OSM hamlet 38.641, -27.967"
+santo_cristo,Santo Cristo,Sao Jorge,,38.626615,-27.929559,,,recent_only,OpenStreetMap,Lagoa de Santo Cristo (OSM relation 7277731)

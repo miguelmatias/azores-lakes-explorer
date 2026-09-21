@@ -4,6 +4,8 @@ Shiny app over the processed Azores lake monitoring tables (coverage, taxon rich
 
 Live app: https://miguelmatias.shinyapps.io/azores-lakes-explorer/
 
+The first panel is a site map. Coverage and richness plots are static (the full plotly heatmap timed out on shinyapps.io).
+
 ## Run locally
 
 ```r
@@ -11,7 +13,7 @@ Live app: https://miguelmatias.shinyapps.io/azores-lakes-explorer/
 shiny::runApp()
 ```
 
-Packages: `shiny`, `bslib`, `dplyr`, `ggplot2`, `plotly`, `DT`, `readr`.
+Packages: `shiny`, `bslib`, `dplyr`, `ggplot2`, `leaflet`, `DT`, `readr`.
 
 ## Publish
 
@@ -33,6 +35,7 @@ sh publish.sh
 Derived CSVs only (no raw Excel):
 
 - `data/lake_lookup.csv`
+- `data/lake_sites.csv` (map coordinates; Rasa Serra Devassa corrected; Branca and fajãs filled from OSM / approximate)
 - `data/coverage_heatmap_seasonal.csv`
 - `data/richness_timeseries_samples.csv`
 - `data/richness_timeseries_annual.csv`
