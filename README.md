@@ -1,6 +1,6 @@
-# Azores long-term lakes explorer
+# Azores Lake Database
 
-Shiny app over the processed Azores lake monitoring tables (coverage, taxon richness, searchable samples). Empty coverage tiles mean that season is **not in this project**, not that a campaign did not happen. 2018 SPR18 macros and chemistry are coded as **Spring** (Mar–Apr).
+Shiny app over the processed Azores lake monitoring tables (coverage, taxon richness, searchable samples). Empty coverage tiles mean that season is **not in this project**, not that a campaign did not happen. 2018 SPR18 macros and chemistry are coded as **Spring** (Mar-Apr).
 
 Live app: https://miguelmatias.shinyapps.io/azores-lakes-explorer/
 

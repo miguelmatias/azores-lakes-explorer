@@ -20,7 +20,7 @@ if (is.null(accounts) || !nrow(accounts)) {
 rsconnect::deployApp(
   appDir = ".",
   appName = "azores-lakes-explorer",
-  appTitle = "Azores long-term lakes",
+  appTitle = "Azores Lake Database",
   launch.browser = FALSE,
   forceUpdate = TRUE
 )

@@ -1,4 +1,4 @@
-# Azores long-term lake explorer
+# Azores Lake Database
 # Reads only the processed CSVs in data/. Empty tiles = not in this project.
 # Coverage/richness are static ggplot (plotly of the full heatmap timed out on shinyapps).
 
@@ -107,10 +107,63 @@ or_all <- function(selected, all_vals) {
   if (is.null(selected) || !length(selected)) all_vals else selected
 }
 
+app_theme <- bs_theme(
+  version = 5,
+  preset = "shiny",
+  primary = "#2D6A4F",
+  secondary = "#52796F",
+  success = "#40916C",
+  info = "#74C69D",
+  warning = "#B08968",
+  danger = "#9B2226",
+  bg = "#F4F7F1",
+  fg = "#081C15"
+) %>%
+  bs_add_rules("
+    .bslib-page-sidebar > .navbar {
+      min-height: 13.5rem;
+      align-items: flex-end;
+      border-bottom: 0 !important;
+      background-color: #1B4332 !important;
+      background-image: linear-gradient(180deg, rgba(8, 28, 21, 0.28) 0%, rgba(8, 28, 21, 0.62) 100%), url('header.jpg') !important;
+      background-size: cover !important;
+      background-position: center 40% !important;
+      background-repeat: no-repeat !important;
+      box-shadow: 0 0.5rem 1.25rem rgba(8, 28, 21, 0.22);
+      padding-top: 0.75rem;
+      padding-bottom: 1.15rem;
+    }
+    .bslib-page-sidebar > .navbar .navbar-brand,
+    .bslib-page-sidebar > .navbar .bslib-page-title {
+      color: #fff !important;
+      font-size: clamp(1.55rem, 2.6vw, 2.35rem);
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75), 0 0 3px rgba(0, 0, 0, 0.9);
+    }
+    .bslib-sidebar-layout > .sidebar {
+      background-color: #E7EFE4;
+    }
+    .card-header {
+      background-color: #E7EFE4;
+      color: #1B4332;
+      font-weight: 600;
+    }
+    .nav-underline .nav-link.active {
+      color: #1B4332;
+      border-bottom-color: #2D6A4F;
+    }
+    @media (max-width: 768px) {
+      .bslib-page-sidebar > .navbar { min-height: 8.75rem; }
+      .bslib-page-sidebar > .navbar .bslib-page-title { font-size: 1.35rem; }
+    }
+  ")
+
 ui <- page_sidebar(
-  title = "Azores long-term lakes",
+  title = "Azores Lake Database",
+  window_title = "Azores Lake Database",
   fillable = FALSE,
-  theme = bs_theme(version = 5, bootswatch = "flatly"),
+  theme = app_theme,
   sidebar = sidebar(
     width = 300,
     p("Processed monitoring tables only. Empty cells mean that season is not in this project, not that a campaign did not happen. 2018 SPR18 macros and chemistry are Spring (Mar-Apr)."),
