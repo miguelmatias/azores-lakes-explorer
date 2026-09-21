@@ -16,12 +16,14 @@ if (!file.exists(file.path(data_dir, "lake_lookup.csv"))) {
 }
 
 island_levels <- c("Corvo", "Flores", "Pico", "Sao Miguel", "Sao Jorge")
+# Display labels use Unicode escapes so a-tilde is independent of source encoding
+# (shinyapps.io has sourced this file as non-UTF-8). Filter values stay ASCII.
 island_labels <- c(
   Corvo = "Corvo",
   Flores = "Flores",
   Pico = "Pico",
-  `Sao Miguel` = "São Miguel",
-  `Sao Jorge` = "São Jorge"
+  `Sao Miguel` = "S\u00e3o Miguel",
+  `Sao Jorge` = "S\u00e3o Jorge"
 )
 island_cols <- c(
   Corvo = "#4C78A8",
@@ -111,7 +113,7 @@ ui <- page_sidebar(
   theme = bs_theme(version = 5, bootswatch = "flatly"),
   sidebar = sidebar(
     width = 300,
-    p("Processed monitoring tables only. Empty cells mean that season is not in this project, not that a campaign did not happen. 2018 SPR18 macros and chemistry are Spring (Mar–Apr)."),
+    p("Processed monitoring tables only. Empty cells mean that season is not in this project, not that a campaign did not happen. 2018 SPR18 macros and chemistry are Spring (Mar-Apr)."),
     checkboxGroupInput(
       "islands",
       "Island",
@@ -152,7 +154,12 @@ ui <- page_sidebar(
     full_screen = TRUE,
     card_header("Sampling sites"),
     leafletOutput("sites_map", height = "560px"),
-    card_footer("Lake locations (WGS84). Click a point for name and island. Rasa Serra Devassa uses the São Miguel Serra Devassa position, not the Flores Rasa coordinates copied into the Oikos environment file. Cubres Este/Oeste are approximate.")
+    card_footer(paste0(
+      "Lake locations (WGS84). Click a point for name and island. ",
+      "Rasa Serra Devassa uses the S\u00e3o Miguel Serra Devassa position, ",
+      "not the Flores Rasa coordinates copied into the Oikos environment file. ",
+      "Cubres Este/Oeste are approximate."
+    ))
   ),
   navset_card_underline(
     nav_panel(
@@ -170,7 +177,7 @@ ui <- page_sidebar(
         inline = TRUE
       ),
       plotOutput("richness_plot", height = "1100px"),
-      p(class = "text-muted", "Env has no taxon richness. Zooplankton is sparse (2011–2012 and spring 2025).")
+      p(class = "text-muted", "Env has no taxon richness. Zooplankton is sparse (2011-2012 and spring 2025).")
     ),
     nav_panel(
       "Table",
