@@ -2,7 +2,7 @@
 
 Shiny app over the processed Azores lake monitoring tables (coverage, taxon richness, searchable samples). Empty coverage tiles mean that season is **not in this project**, not that a campaign did not happen. 2018 SPR18 macros and chemistry are coded as **Spring** (Mar–Apr).
 
-Live app: *(add the shinyapps.io URL after `Rscript deploy.R`)*
+Live app: https://miguelmatias.shinyapps.io/azores-lakes-explorer/
 
 ## Run locally
 
